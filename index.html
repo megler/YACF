@@ -45,6 +45,7 @@
                 <section class="u--padding__left">
                     <h2 id="toc" class="u--text__center">Table of Contents</h2>
                     <ul>
+                        <li><a href="#install">Install YACF</a></li>
                         <li><a href="#grid">The Grid</a></li>
                         <ul>
                             <li><a href="#flex">Switching to Flexbox</a></li>
@@ -71,6 +72,32 @@
                         <li><a href="#response">Let's Get Responsive!</a></li>
                         <li><a href="#custom">Customizing</a></li>
                     </ul>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="install" class="u--text__center">Installing YACF</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Installing YACF is easy! Here are your options:</p>
+                    <ol>
+                        <li>Download the latest release from Github or</li>
+                        <li>Clone our Git repository. <code class="bg__black u--padding__sides">git clone
+                                git://github.com/megler/YACF.git</code></li>
+                    </ol>
+                    <p>If you just want to use YACF out of the box with no modifications,
+                        download the latest release up in step 1 and extract either <code
+                            class="bg__black u--padding__sides">yacf-style.css</code> or
+                        <code class="bg__black u--padding__sides">yacf-style-min.css</code> and call it in your header.
+                    </p>
+                    <p>You place the stylesheet in your header like this:</p>
+                    <code class="bg__black u--padding">
+                        <p>link rel="stylesheet"
+                            href="/directory-to-style-folder/yacf-style.css"</p>
+                    </code>
+                    <p>If you would like to customize YACF via the built-in SASS, then you can install using either step
+                        1 or 2 above and extracting the entire package. You will still place your stylesheet normally,
+                        but now you will have all of the Sass files and optional npm scripts for automation. </p>
+                    <p>That will give you full access to all the YACF classes. That's it! You're ready to roll!
+                    </p>
+
                 </section>
                 <section class="u--padding__left">
                     <h2 id="grid" class="u--text__center">The Grid</h2>
@@ -401,13 +428,13 @@
                         <p>div class = "col-span-3 col-span-4@m col-span-6@s" </p>
                     </code>
                     <p>That translates to: at desktop, span 3 colmns, resize to 4 at
-                        the medium (tablet) breakpoint and 6 columns at the small (mobile) 
+                        the medium (tablet) breakpoint and 6 columns at the small (mobile)
                         breakpoint.
                     </p>
                     <p>If you check out the <a href="/example.html">Example Page</a> you'll see this in
-                    action.  The main body text goes from 2 columns that span 3 wide (col-span-3) to full
-                width at the tablet and mobile breakpoints.  This gives you the flexibility to have the
-            layout look however you like on each screen size.</p>
+                        action. The main body text goes from 2 columns that span 3 wide (col-span-3) to full
+                        width at the tablet and mobile breakpoints. This gives you the flexibility to have the
+                        layout look however you like on each screen size.</p>
                 </section>
                 <section class="u--padding__left">
                     <h2 id="custom" class="u--text__center u--padding__top">Customizing</h2>

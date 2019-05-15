@@ -1,18 +1,18 @@
 {
-  "name": "test-app",
+  "name": "yacf",
   "version": "1.0.0",
-  "description": "HTML Production Setup",
+  "description": "YACF - Yet Another CSS Framework",
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss styles/yacf-style.css --w --output-style=expanded",
     "refresh": "browser-sync start --server --files sass/*.scss styles/yacf-style.css --browser=firefox",
-    "start": "npm-run-all --parallel compile:sass refresh"
+    "start": "npm-run-all --parallel compile:sass refresh",
+    "compress:css": "node-sass sass/main.scss styles/yacf-style-min.css --output-style=compressed"
   },
   "author": "Marceia Egler",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.12.0",
-    "npm-run-all": "^4.1.5",
-    "tar": ">=4.4.2"
+    "npm-run-all": "^4.1.5"
   }
 }
