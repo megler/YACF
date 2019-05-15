@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>YACF - Yet Another CSS Framework</title>
+    <link rel="stylesheet" href="./styles/yacf-style.css">
+
+</head>
+
+<body>
+    <div class="grid-container col-span-6 u--div__center border grid--width">
+        <a href="#skip" class="skip">Skip to content</a>
+        <header class="col-span-6  u--text__center bg__maroon">
+            <!-- Header content -->
+            <nav class="col-span-6  u--text__center bg__silver u--text__left-mob u--padding__left-mob">
+                <!-- Navigation -->
+                <ul class=" u--flex-container menu__right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="example.html">Example Page</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="col-span-6 u--padding">
+            <div class="u-width__response u--div__center">
+                <section class="u--padding__left">
+                    <h1 class="u--text__center text--color__maroon">YACF</h1>
+                    <h3 class="u--text__center text--color__black">Yet Another CSS Framework</h3>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="skip" class="u--text__center">Intro</h2>
+                    <p>YACF (pronounced "Yack-Siff") may sound like what your cat does when he has a hairball,
+                        but in reality, it's a flexible CSS only Framework.
+                        With YACF, the hard work of layout has been thought out for you.
+                        All you need to do is strategically place your classes and you're all set.</p>
+                    <p class="bold">Want to customize? Not a problem!</p>
+                    <p>With YACF you have a customization page for all your Sassy/CSS needs so you
+                        can change anything to make it more suitable to your needs!
+                    </p>
+                    <p>Let's Learn How to YACF!</p>
+                </section>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="toc" class="u--text__center">Table of Contents</h2>
+                    <ul>
+                        <li><a href="#grid">The Grid</a></li>
+                        <ul>
+                            <li><a href="#flex">Switching to Flexbox</a></li>
+                            <li><a href="#container">Controlling Container Widths</a></li>
+                        </ul>
+                        <li><a href="#start">Getting Started</a></li>
+                        <li><a href="#colors">Colors</a></li>
+                        <ul>
+                            <li><a href="#bg">Background Colors</a></li>
+                            <li><a href="#tc">Text Colors</a></li>
+                            <li><a href="#bc">Button Colors</a></li>
+                        </ul>
+                        <li><a href="#button">Buttons</a></li>
+                        <ul>
+                            <li><a href="#bc">Button Colors</a></li>
+                            <li><a href="#bs">Button Sizes</a></li>
+                        </ul>
+                        <li><a href="#pad">Padding and Margin</a></li>
+                        <li><a href="#type">Typography</a></li>
+                        <ul>
+                            <li><a href="#scale">Type Scale</a></li>
+                            <li><a href="#text">Text</a></li>
+                        </ul>
+                        <li><a href="#response">Let's Get Responsive!</a></li>
+                        <li><a href="#custom">Customizing</a></li>
+                    </ul>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="grid" class="u--text__center">The Grid</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>The main skeleton of the page is laid out using CSS Grid. This allows you more control over
+                        grid placement and page appearance.
+                    </p>
+                    <p>To keep the container flexible, the .grid-container only declares the grid itself and has some
+                        responsive addons. The border you see on this page as well as the width of the container are set
+                        with separate classes so you have maximum flexibility.
+                    </p>
+                    <p>To place the grid, use this class:</p>
+                    <code class="bg__black u--padding">
+                        <p>div class="grid-container"</p>
+                    </code>
+                    <p>From there, you can lay out your columns with some classes that probably seem familiar:</p>
+                    <code class="bg__black u--padding">
+                        <p>div class="col-span-5"</p>
+                    </code>
+                    <p>You can span 1-6 columns using this method. If you want your colums to be responsive, check out
+                        <a href="#response">Let's Get Responsive!</a> below.
+                    </p>
+                    <h4 id="flex">Switching to Flexbox</h4>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Sometimes, Flexbox just makes more sense. Like when you are laying out horizontal menus.
+                        Fear not. It's as easy as selecting a new class:</p>
+                    <code class="bg__black u--padding">
+                        <p>div class="u--flex-container"</p>
+                    </code>
+                    <p>Need something centered in a way only Flexbox can provide? Say no more! YACF has you covered!
+                    </p>
+                    <code class="bg__black u--padding">
+                        <p>div class="u--flex__center"</p>
+                    </code>
+                    <h4 id="container">Controlling container widths</h4>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Container width is controlled with:</p>
+                    <code class="bg__black u--padding">
+                        <p>div class="grid--width"</p>
+                    </code>
+                    <p>The default width is 70% and goes to 100% at tablet and mobile breakpoints. You can change that
+                        to whatever you like in the _customize.scss partial. Leaving this class off makes your container
+                        width 100%.
+                    </p>
+                    <p>Now that you have your grid under control, let's see what else we can do!</p>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="start" class="u--text__center">Getting Started</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>The easiest way to see YACF in action is by inspecting the page code
+                        of either this page, which has been laid out solely using YACF or by
+                        visiting the <a href="example.html">Example Page</a> and inspecting the
+                        page source.
+                    </p>
+                    <p>You can also check out _example.scss to see how images where handled. You can
+                        do this just as easily in the _customize.scss partial. Because the example page
+                        utilizes a 2 column layout, you can see how responsiveness was addressed using
+                        the respond-to mixin.
+                    </p>
+
+                </section>
+                <section class="u--padding__left">
+                    <h2 class="u--text__center u--padding__top" id="colors">Colors</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Don't be hemmed in by 3 colors! You have an entire palette to choose from. Here is your color
+                        palette along with the variable names that control them. These variables are used in a
+                        variety
+                        of classes
+                        such as background colors, text colors, and buttons. Any of the displayed colors can be used
+                        with a
+                        quick class declaration.</p>
+                    <p>Afraid your site will look like an Easter Egg? Here's a resource to help you with color
+                        selection.</p>
+                    <p><a href="https://tallys.github.io/color-theory/" target="_blank">Practical Color Theory
+                            For People Who Code</a>
+                    </p>
+                    <div class="u--flex-container u--flex__center">
+                        <div class="navy">
+                            <p>$navy</p>
+                        </div>
+                        <div class="blue">
+                            <p>$blue</p>
+                        </div>
+                        <div class="aqua">
+                            <p>$aqua</p>
+                        </div>
+                        <div class="teal">
+                            <p>$teal</p>
+                        </div>
+                        <div class="olive">
+                            <p>$olive</p>
+                        </div>
+                        <div class="green">
+                            <p>$green</p>
+                        </div>
+                        <div class="lime">
+                            <p>$lime</p>
+                        </div>
+                        <div class="yellow">
+                            <p>$yellow</p>
+                        </div>
+                        <div class="orange">
+                            <p>$orange</p>
+                        </div>
+                        <div class="red">
+                            <p>$red</p>
+                        </div>
+                        <div class="fuchsia">
+                            <p>$fuchsia</p>
+                        </div>
+                        <div class="purple">
+                            <p>$purple</p>
+                        </div>
+                        <div class="maroon">
+                            <p>$maroon</p>
+                        </div>
+                        <div class="white">
+                            <p>$white</p>
+                        </div>
+                        <div class="silver">
+                            <p>$silver</p>
+                        </div>
+                        <div class="gray">
+                            <p>$gray</p>
+                        </div>
+                        <div class="black">
+                            <p>$black</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="bg" class="u--text__center u--padding__top">Background Colors</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Background colors are a snap! Just use the following class wherever you want to change a
+                        color:
+                    </p>
+                    <code class="bg__black u--padding">
+                        <p>.bg__red (or whatever color from the above palette works for
+                            you)</p>
+                    </code>
+                    <p>For example if you wanted to change a div background you could:</p>
+                    <code class="bg__black u--padding">
+                        <p>div class="bg__blue"</p>
+                    </code>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="tc" class="u--text__center u--padding__top">Text Colors</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Text colors are as easy as backgrounds. Here's how you do it.</p>
+                    <code class="bg__black u--padding">
+                        <p>div class="text--color__blue"</p>
+                    </code>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="button" class="u--text__center u--padding__top">Buttons</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Buttons can be any color you like!</p>
+                    <p>It's as easy as:</p>
+                    <ul>
+                        <li>Declare your button</li>
+                        <li>Add a button color modifier!</li>
+                    </ul>
+                    <h3 id="bc" class="u--text__center text--color__black">Check out all the button options</h3>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <h3>So many colors!</h3>
+                    <div class="u--flex-container u--flex__center">
+                        <button class="u--margin__right u--margin__top btn btn__large btn__navy">btn__navy</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__blue">btn__blue</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__aqua">btn__aqua</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__teal">btn__teal</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__olive">btn__olive</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__green">btn__green</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__lime">btn__lime</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__yellow">btn__yellow</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__orange">btn__orange</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__red">btn__red</button>
+                        <button
+                            class="u--margin__right u--margin__top btn btn__large btn__fuchsia">btn__fuchsia</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__purple">btn__purple</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__maroon">btn__maroon</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__white">btn__white</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__silver">btn__silver</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__gray">btn__gray</button>
+                        <button class="u--margin__right u--margin__top btn btn__large btn__black">btn__black</button>
+                    </div>
+                    <h3 id="bs">Button sizes</h3>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <div class="u--flex-container">
+                        <div class="display">
+                            <p>Regular</p>
+                            <button class="btn btn__blue">class="btn btn__blue"</button>
+                        </div>
+                        <div class="display u--padding__left">
+                            <p>Large</p>
+                            <button class="btn btn__large btn__blue">class="btn btn__large btn__blue"</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="pad" class="u--text__center u--padding__top">Padding and Margin</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>Padding and margin can be controlled either through class placement or the customization page
+                        we'll talk about soon.
+                        Here are the base classes you can use:
+                    </p>
+                    <code class="bg__black u--padding">
+                        <p>div class="u--padding or u--margin"</p>
+                    </code>
+                    <p>You can set padding and margin in a number of configurations. Here are your options:</p>
+                    <code class="bg__black u--padding">
+                        <ul class="li--no u--padding__none">
+                            <li>
+                                div class="u--padding__left"
+                            </li>
+                            <li>
+                                div class="u--padding__right"
+                            </li>
+                            <li>
+                                div class="u--padding__top"
+                            </li>
+                            <li>
+                                div class="u--padding__bottom"
+                            </li>
+                            <li>
+                                div class="u--padding__vertical"
+                            </li>
+                            <li>
+                                div class="u--padding__left"
+                            </li>
+                            <li>div class="u--padding__none"</li>
+                        </ul>
+                    </code>
+                    <p>You can swap out the word padding with margin and control that as well.
+                        Also, if you need to add or remove padding at the mobile breakpoint (currently this feature
+                        is only available at the mobile breakpoint, but you could add additional breaks
+                        in the customize.scss partial), you can add -mob
+                        to the class like this: </p>
+                    <code class="bg__black u--padding">
+                        <p>div class="u--padding__left-mob"</p>
+                    </code>
+                    <p>Let's say you have a div where you want left padding at desktop and tablet
+                        but no padding when it's mobile sizes. Here's how that would look:
+                    </p>
+                    <code class="bg__black u--padding">
+                        <p>div class="u--padding__left u--padding__none-mob"</p>
+                    </code>
+                    <p>The -mob class will override the regular class when the breakpoint is hit.</p>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="type" class="u--text__center u--padding__top">Typography</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>To make spacing across the framework easy math, the base font-size is set to
+                        62.5% which means 1rem = 10px.
+                    </p>
+                    <p>Now, any spacing is as easy as moving the decimal point. For example:</p>
+                    <code class="bg__black u--padding">
+                        <p> 18px = 1.8rem</p>
+                        <p> 20px = 2rem</p>
+                        <p> 5px = .5rem</p>
+                    </code>
+                    <p>Note this math will works in REMs and EMs not PX. As a result, you'll find layout changes are a
+                        breeze.</p>
+                    <h3 id="scale">Type Scale</h3>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>YACF utilizes a responsive type scale. Never heard of it? <a
+                            href="https://medium.com/sketch-app-sources/exploring-responsive-type-scales-cf1da541be54"
+                            target="_blank">Here's a resource. </a>
+                    </p>
+                    <p>This type scale responds over 3 breakpoints. Desktop, Tablet, and Mobile. It uses 3 different
+                        typescales
+                        to achieve the result. Because the type scale uses CSS Custom Properties, it takes a little more
+                        finagling
+                        to make changes. In the _customize.scss partial, you'll make changes like this:
+                    </p>
+                    <code class="bg__black u--padding">
+                        <p>--browser-default-font: 1.8; // This is a default base font of 18px</p>
+                        <p>--multiplier: 1.250; // This is the typescale multiplier you want to use.</p>
+                    </code>
+                    <p>So if you want to change the type scale from 1.250 to 1.3, you'd do this:</p>
+                    <code class="bg__black u--padding">
+                        <p>h1,
+                            h2,
+                            h3,
+                            h4,
+                            h5,
+                            h6,
+                            p,
+                            li {
+                            --multiplier: 1.2;
+                            }</p>
+                    </code>
+                    <p>That would change the scale of all headers, p tags and li tags.</p>
+                    <h3 id="text">Text</h3>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>In addition to text color and type scale, you can easily change text position, weight,
+                        and style.
+                    </p>
+                    <code class="bg__black u--padding">
+                        <p>Bold = .bold</p>
+                        <p>Italics = .italics</p>
+                        <p>Center = .u--text__center</p>
+                        <p>Right = .u--text__right</p>
+                        <p>Left = .u--text__left</p>
+                        <p>Large = .u--text__large // makes text 2 rem. You can change in _customize.scss</p>
+                        <p>Remove Bullet Point Dots = .li--no // Not text, but closely related.</p>
+                    </code>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="response" class="u--text__center u--padding__top">Let's Get Responsive!</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>YACF has 3 breakpoints:</p>
+                    <code class="bg__black u--padding">
+                        <p>Desktop: (min-width: 960px) // $bp-lg</p>
+                        <p>Tablet: (min-width: 720px) and (max-width: 960px) // $bp-md and $bp-lg</p>
+                        <p>Mobile: (min-width: 150px) and (max-width: 720px) // 150px and $bp-md</p>
+                    </code>
+                    <p>They are controlled with the following respond-to mixin:</p>
+                    <code class="bg__black u--padding">
+                        <p>@include respond-to(mobile)</p>
+                        <p>You can replace mobile with tablet or desktop</p>
+                    </code>
+                    <p>The point of having a responsive grid system is having the flexibility to change
+                        the column layout at breakpoints. What looks terrific as 3 columns on desktop may
+                        look terrible on tablet or mobile.
+                    </p>
+                    <p>YACF makes this a snap. You can change column count at breakpoints like this:</p>
+                    <code class="bg__black u--padding">
+                        <p>div class = "col-span-3 col-span-4@m col-span-6@s" </p>
+                    </code>
+                    <p>That translates to: at desktop, span 3 colmns, resize to 4 at
+                        the medium (tablet) breakpoint and 6 columns at the small (mobile) 
+                        breakpoint.
+                    </p>
+                    <p>If you check out the <a href="/example.html">Example Page</a> you'll see this in
+                    action.  The main body text goes from 2 columns that span 3 wide (col-span-3) to full
+                width at the tablet and mobile breakpoints.  This gives you the flexibility to have the
+            layout look however you like on each screen size.</p>
+                </section>
+                <section class="u--padding__left">
+                    <h2 id="custom" class="u--text__center u--padding__top">Customizing</h2>
+                    <p><a href="#toc">Back to Top</a></p>
+                    <p>While YACF does most of the work for you, you may want to customize
+                        some styles and make them your own. The easiest way to do that is on
+                        the _customize.scss partial page.
+                    </p>
+                    <p>Use this page to override any default setting and set it to whatever you like.</p>
+                    <p>YACF SASS is laid out using a variation of 7-1 folder architecture. That means
+                        the majority of styles are in partials that have (hopefully) obvious names. (eg. if
+                        you are looking for navigation styles, check the navigation partial). About the only place this
+                        is not the case is with any feature that have a color option (buttons, text, etc). For
+                        that, check the _functions.scss partial.
+                    </p>
+                    <p class="bold">Please note:</p>
+                    <p>The _customize.scss partial is positioned at the bottom of the main.scss import page.
+                        It needs to be there if you intend to change any CSS Custom Properties such as type scale.
+                        This is due to how CSS Custom Properties take advantage of the top/down nature of CSS in
+                        order to work properly. If you move the _customize partial to a different position in
+                        main.scss, your Custom Properties overrides may not work as expected.
+                    </p>
+                </section>
+            </div>
+        </main>
+        <footer class="col-span-6 u--text__center bg__maroon">
+            <!-- Footer content -->
+            <nav class="col-span-6  u--text__center u--text__left-mob u--padding__left-mob">
+                <!-- Navigation -->
+                <ul class=" u--flex-container menu__left">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="example.html">Example Page</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>

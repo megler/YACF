@@ -1,0 +1,110 @@
+// Typography rules
+
+//Colors - See _functions.scss for background colors and text colors
+
+
+html {
+    //this defines what 1rem is
+    font-size: 62.5%; // 1rem = 10px   Set font to a base 10 this way:  10px/16px (browser default) = 62.5%
+}
+
+.border {
+    border: 1px solid black;
+}
+
+//link decoration
+a {
+    color: $link-color;
+    text-decoration: none; 
+      
+}
+
+ /*Skip link styling */
+ .skip {
+     position: absolute;
+     top: -1000px;
+     left: -1000px;
+     height: 1px;
+     width: 1px;
+     text-align: left;
+     overflow: hidden;
+ }
+
+ a.skip:active,
+ a.skip:focus,
+ a.skip:hover {
+     left: 0;
+     top: 0;
+     width: auto;
+     height: auto;
+     overflow: visible;
+ }
+
+
+
+
+//create variables for responsive typescale.  The only number that needs to change is the multiplier.
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li
+{
+    --browser-default-font: 1.8;
+    --multiplier: 1.250; // Major Third Type Scale
+    --p: var(--browser-default-font);
+    --h6: calc(var(--p) * var(--multiplier));
+    --h5: calc(var(--h6) * var(--multiplier));
+    --h4: calc(var(--h5) * var(--multiplier));
+    --h3: calc(var(--h4) * var(--multiplier));
+    --h2: calc(var(--h3) * var(--multiplier));
+    --h1: calc(var(--h2) * var(--multiplier));
+
+}
+
+body {
+    font-family: $body-font;
+    color: $black;
+    line-height: 1.8;    
+
+ //loop through all headings h1-h6, apply typescale calculation
+ @for $i from 1 through 6 {
+     h#{$i} {
+         font-size: calc(var(--h#{$i}) * 1em);
+         line-height: 1;
+
+          @include respond-to(tablet) {              
+                  --multiplier: 1.20; //Minor Third typescale             
+          }
+
+           @include respond-to(mobile) {
+               --multiplier: 1.125; //Major Second typescale             
+           }
+         
+     }
+ }
+ // take above calcs and convert to em sizing
+    p,    
+    li
+       {
+       font-size: calc(var(--p) * 1em);
+    }
+}
+
+// remove bullet points
+.li--no {
+    list-style: none;
+}
+
+// text decoration
+
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}

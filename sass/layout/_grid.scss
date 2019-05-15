@@ -1,0 +1,60 @@
+// Grid system
+
+.grid-container {
+    @include grid;
+
+
+    @include respond-to(tablet) {
+        border: none;
+        margin: initial;
+    }
+
+    @include respond-to(mobile) {
+        border: none;
+        margin: initial;
+    }
+
+}
+
+.grid--width {
+    max-width: 70%;
+
+    @include respond-to(tablet) {
+        max-width: 100%;
+    }
+
+    @include respond-to(mobile) {
+        max-width: 100%;
+    }
+}
+
+.grid--gap {
+    grid-column-gap: 2rem;
+}
+
+// define the 6 base column classes
+@for $i from 1 through 6 {
+    .col-span-#{$i} {
+        grid-column: span $i;
+    }
+}
+
+/* Tablet Column Breakpoints */
+@include respond-to(tablet) {
+
+    @for $i from 1 through 6 {
+        .col-span-#{$i}\@m {
+            grid-column: span $i ;
+        }
+    }   
+}
+
+/* Mobile Column Breakpoints */
+@include respond-to(mobile) {
+
+    @for $i from 1 through 6 {
+        .col-span-#{$i}\@s {
+            grid-column: span $i;
+        }
+    }
+}

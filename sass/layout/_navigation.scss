@@ -1,0 +1,39 @@
+// Navigation 
+
+.menu__right {
+    justify-content: end;    
+    list-style: none;
+
+    & li {
+        margin-right: 1.3rem;
+        padding-right: 1rem;
+    }   
+    
+    @include respond-to(tablet) {        
+        padding-right: 4rem;
+    }
+    
+    @include respond-to(mobile) {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.menu__left {
+    justify-content: start;
+    list-style: none;
+
+    & li {
+        margin-left: 1.3rem;
+        padding-left: 1rem;
+    }
+
+    @include respond-to(tablet) {
+        padding-left: 4rem;
+    }
+
+    @include respond-to(mobile) {
+        flex-direction: column;
+        padding: 0;
+    }
+}

@@ -1,0 +1,47 @@
+//sass default variables
+
+//fonts
+$body-font: 'Open Sans',sans-serif;
+
+// base unit for padding, margin
+:root {
+    --unit: 1rem;
+}
+
+// Default Colors 
+// Palette credit: https://clrs.cc/
+
+$navy:#001F3F !default;
+$blue: #0074D9 !default;
+$aqua: #7FDBFF !default;
+$teal: #39CCCC !default;
+$olive: #3D9970 !default;
+$green: #2ECC40 !default;
+$lime: #01FF70 !default;
+$yellow: #FFDC00 !default;
+$orange: #FF851B !default;
+$red:  #FF4136 !default;
+$fuchsia: #F012BE !default;
+$purple: #B10DC9 !default;
+$maroon: #85144B !default;
+$white: #FFFFFF !default;
+$silver: #DDDDDD !default;
+$gray: #AAAAAA !default;
+$black: #111111 !default;
+
+//default link colors
+$link-color: $blue !default;
+
+// default grid variables
+$gap-horizontal: 0 !default;
+$gap-vertical: 0 !default;
+
+// default container widths
+$sm: 540px !default;
+$md: 720px !default;
+$lg: 960px !default;
+
+// default breakpoint variables
+$bp-sm: $sm !default;
+$bp-md: $md !default;
+$bp-lg: $lg !default;

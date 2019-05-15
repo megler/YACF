@@ -1,0 +1,93 @@
+// Sass Functions
+
+//Same function as below, just for links
+@function linkColor($value) {
+    @if(lightness($value) > 50) {
+        @return $link-color;
+    }
+
+    @else {
+        @return $white;
+    }
+}
+
+//Function to control text color based on background color.  Credit: Jen Kramer
+@function textColor($value) {
+    @if(lightness($value) > 48) {
+        @return $black;
+    }
+
+    @else if $value==$red {
+        @return $white;
+    }
+
+    @else {
+        @return $white;
+    }
+}
+
+// Generate colors in a grid so you can see what they look like on a screen
+// See /colors.html for a display
+$colorList: (navy, $navy),
+(blue, $blue),
+(aqua, $aqua),
+(teal, $teal),
+(olive, $olive),
+(green, $green),
+(lime, $lime),
+(yellow, $yellow),
+(orange, $orange),
+(red, $red),
+(fuchsia, $fuchsia),
+(purple, $purple),
+(maroon, $maroon),
+(white, $white),
+(silver, $silver),
+(gray, $gray),
+(black, $black);
+
+@each $key,
+$value in $colorList {
+
+    // create color palette layout for color divs
+    .#{$key} {
+        background-color: $value;
+        height: 100px;
+        width: 150px;
+        text-align: center;
+        border: 1px solid $black;
+        color: textColor($value);
+    }
+
+    //create button color modifiers
+    .btn__#{$key} {
+        background-color: $value;
+        border: 1px solid darken($value, 15%);
+        color: textColor($value);
+    }
+
+    .btn__#{$key}:hover {
+        color: textColor($value);
+        background-color: darken($value, 15%);
+        border-color: darken($value, 20%);
+    }
+
+    // create background color modifiers
+
+    .bg__#{$key} {
+        background-color: $value;
+        color: textColor($value);
+        
+        //Link Color Modifier
+        a {
+            color: linkColor($value);
+        }
+    }
+
+    // create text color modifiers
+
+    .text--color__#{$key} {
+        color: $value;
+    }
+
+}

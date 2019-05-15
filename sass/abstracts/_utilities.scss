@@ -1,0 +1,169 @@
+// grid utilities
+.u--flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.u--flex__center {
+    justify-content: center;
+    align-items: center;
+}
+
+.u--div__center {
+    margin: 0 auto;
+}
+
+@include respond-to(mobile) {
+    .u--flex-container-mob {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .u--flex__center-mob {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .u--div__center-mob {
+        margin: 0 auto;
+    }
+
+}
+
+
+//text utilities
+.u--text__center {
+    text-align: center;
+}
+
+.u--text__right {
+    text-align: right;
+}
+
+.u--text__left {
+    text-align: left;
+}
+
+.u--text__large {
+    font-size: 2rem;
+}
+
+@include respond-to(mobile) {
+    .u--text__center-mob {
+        text-align: center;
+    }
+
+    .u--text__right-mob {
+        text-align: right;
+    }
+
+    .u--text__left-mob {
+        text-align: left;
+    }
+}
+
+// padding
+
+.u--padding {
+    padding: var(--unit);
+}
+
+.u--padding__left {
+    padding-left: var(--unit);
+}
+
+.u--padding__right {
+    padding-right: var(--unit);
+}
+
+.u--padding__top {
+    padding-top: var(--unit);
+}
+
+.u--padding__bottom {
+    padding-bottom: var(--unit);
+}
+
+.u--padding__sides {
+    padding: 0 var(--unit);
+}
+
+.u--padding__vertical {
+    padding: var(--unit) 0;
+}
+
+.u--padding__none {
+    padding: 0;
+}
+
+@include respond-to(mobile) {
+
+    .u--padding__none-mob {
+        padding: 0;
+    } 
+
+    .u--padding-mob {
+        padding: var(--unit);
+    }
+
+    .u--padding__left-mob {
+        padding-left: var(--unit);
+    }
+
+    .u--padding__right-mob {
+        padding-right: var(--unit);
+    }
+
+    .u--padding__top-mob {
+        padding-top: var(--unit);
+    }
+
+    .u--padding__bottom-mob {
+        padding-bottom: var(--unit);
+    }
+
+    .u--padding__sides-mob {
+        padding: 0 var(--unit);
+    }
+
+    .u--padding__vertical-mob {
+        padding: var(--unit) 0;
+    }
+}
+
+
+// margin
+
+.u--margin {
+    margin: var(--unit);
+}
+
+.u--margin__left {
+    margin-left: var(--unit);
+}
+
+.u--margin__right {
+    margin-right: var(--unit);
+}
+
+.u--margin__top {
+    margin-top: var(--unit);
+}
+
+.u--margin__bottom {
+    margin-bottom: var(--unit);
+}
+
+.u--margin__sides {
+    margin: 0 var(--unit);
+}
+
+.u--margin__vertical {
+    margin: var(--unit) 0;
+}
+
+.u--margin__none {
+    margin: 0;
+}
