@@ -1052,7 +1052,7 @@ body li {
 }
 
 .menu__right {
-  justify-content: end;
+  justify-content: flex-end;
   list-style: none;
 }
 
@@ -1075,7 +1075,7 @@ body li {
 }
 
 .menu__left {
-  justify-content: start;
+  justify-content: flex-start;
   list-style: none;
 }
 

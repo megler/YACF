@@ -30,8 +30,8 @@ There are pre-built scripts in the package.json file that when run, will auto co
 
 ### Documentation:
 
-You can read all of the documentation on the YACF homepage.
+You can read all of the documentation on the [YACF homepage](https://megler.github.io/YACF/).
 
 ### YACF In Action
 
-Here is an example page using YACF.  View the page source to see the classes in action.
+Here is an [example page](https://megler.github.io/YACF/example.html) using YACF.  View the page source to see the classes in action.

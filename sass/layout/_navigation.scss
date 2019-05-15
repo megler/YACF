@@ -1,7 +1,7 @@
 // Navigation 
 
 .menu__right {
-    justify-content: end;    
+    justify-content: flex-end;    
     list-style: none;
 
     & li {
@@ -20,7 +20,7 @@
 }
 
 .menu__left {
-    justify-content: start;
+    justify-content: flex-start;
     list-style: none;
 
     & li {
